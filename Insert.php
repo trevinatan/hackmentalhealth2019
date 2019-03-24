@@ -7,27 +7,23 @@ $conn = new mysqli('localhost','root','');
 
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("Database connection failed." . $conn->connect_error);
 }
-echo "DB Connected successfully <br>";
+echo "Database connected successfully. <br>";
 
-// this will select the Database sample_db
+// Selects the Database sample_db
 mysqli_select_db($conn,"sample_db");
 
-echo "DB is seleted as Test successfully. <br>";
-
-// create INSERT query
-
+// Create INSERT query
 $sql="INSERT INTO sample_table (fname,fphonenumber, flocation, ftime) VALUES ('$_POST[fname]','$_POST[fphonenumber]', '$_POST[flocation]', '$_POST[ftime]')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully! <br>";
+    echo "Inserted new record successfully! <br>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-echo " <br>";
-
+// Delete old matches
 $sql = "SELECT * FROM sample_table WHERE fmatch=True";
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) >= 2) {
@@ -35,22 +31,29 @@ if (mysqli_num_rows($result) >= 2) {
 }
 
 if ($conn->query($sql) === TRUE) {
-    echo "Record deleted successfully";
+    echo "Old matches deleted successfully. <br>";
 } else {
-    echo "Error deleting record: " . $conn->error;
+    echo "Match found! <br>" . $conn->error;
 }
-$sql = "UPDATE sample_table SET fmatch=True WHERE ftime='$_POST[ftime]'";
+
+// Updates new matches
+$sql = "SELECT * FROM sample_table where fmatch=False AND ftime='$_POST[ftime]'";
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result) == 2) {
+  $sql = "UPDATE sample_table SET fmatch=True WHERE ftime='$_POST[ftime]'";
+}
 
 if ($conn->query($sql) === TRUE) {
-    echo "Record updated successfully <br>";
+    echo "Updated new matches successfully. <br>";
 } else {
-    echo "Error updating record: " . $conn->error;
+    echo "No matches found, please wait. <br>" . $conn->error;
 }
 
+echo "<br>";
 mysqli_close($conn);
 ?>
 
-Welcome <?php echo $_POST['fname']; ?><br>
+Welcome <?php echo $_POST['fname']; ?>!<br><br>
 
 <div id="show"></div>
 
@@ -62,7 +65,6 @@ Welcome <?php echo $_POST['fname']; ?><br>
     }, 3000)
   })
 </script>
-
 
 </body>
 </html>
