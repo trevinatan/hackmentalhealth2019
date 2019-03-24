@@ -45,7 +45,7 @@ a {
   display: flex;
   justify-content: center;
   font-size: 64px;
-  font-family: "Optima" !important;
+  font-family: "Roboto Slab" !important;
 }
 
 #where-box {
@@ -360,7 +360,7 @@ LEVEL 4. SETTINGS
    justify-content: center;
    text-align: center;
  }
- 
+
    #nextbutton-info {
    display: flex;
    flex-direction: row;
