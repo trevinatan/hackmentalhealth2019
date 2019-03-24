@@ -1,3 +1,5 @@
+/** @source: ihatetomatoes.net **/
+
 #loader-wrapper {
     position: fixed;
     top: 0;
@@ -24,7 +26,6 @@
     border-top-color: #3498db;
     -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
     animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
-    /*z-index: 1001;*/
 }
  
 #loader:before {
@@ -102,19 +103,3 @@
     }
 }
 
-/*#loader-wrapper .loader-section {
-    position: fixed;
-    top: 0;
-    width: 51%;
-    height: 100%;
-    background: #222222;
-    z-index: 1000;
-}
- 
-#loader-wrapper .loader-section.section-left {
-    left: 0;
-}
- 
-#loader-wrapper .loader-section.section-right {
-    right: 0;
-}*/
