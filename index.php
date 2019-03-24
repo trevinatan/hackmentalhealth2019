@@ -10,16 +10,6 @@ Time: <input type="text" name="ftime" /><br><br>
 <input type="submit" />
 </form>
 
-<div id="show"></div>
-
-<script type="text/javascript" src="jquery.js"> </script>
-<script type="text/javascript">
-  $(document).ready(function() {
-    setInterval(function() {
-      $('#show').load("data.php")
-    }, 3000)
-  })
-</script>
 
 </body>
 </html>

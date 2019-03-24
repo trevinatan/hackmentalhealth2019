@@ -28,29 +28,30 @@ if ($conn->query($sql) === TRUE) {
 
 echo " <br>";
 
+$sql = "SELECT * FROM sample_table WHERE fmatch=True";
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result) >= 2) {
+  $sql = "DELETE FROM sample_table WHERE fmatch=True";
+}
+
+if ($conn->query($sql) === TRUE) {
+    echo "Record deleted successfully";
+} else {
+    echo "Error deleting record: " . $conn->error;
+}
+$sql = "UPDATE sample_table SET fmatch=True WHERE ftime='$_POST[ftime]'";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Record updated successfully <br>";
+} else {
+    echo "Error updating record: " . $conn->error;
+}
+
 mysqli_close($conn);
 ?>
 
-<?php
- $conn = new mysqli('localhost','root','');
- mysqli_select_db($conn,"sample_db");
- $sql = "SELECT * FROM sample_table";
- $result = mysqli_query($conn, $sql);
- $keepGoing = true;
- if (mysqli_num_rows($result) > 0) {
-   while($row = mysqli_fetch_assoc($result) && $keepGoing) {
-     if ($row["fname"] == "Key") {
-       echo "Name: " . $row["fname"]."<br>";
-       $keepGoing = false;
-     }
-    }
- } else {
-   echo "0 results <br>";
- }
- echo " <br>";
-?>
-
 Welcome <?php echo $_POST['fname']; ?><br>
+
 <div id="show"></div>
 
 <script type="text/javascript" src="jquery.js"> </script>
@@ -61,6 +62,7 @@ Welcome <?php echo $_POST['fname']; ?><br>
     }, 3000)
   })
 </script>
+
 
 </body>
 </html>
