@@ -7,9 +7,6 @@ $(document).ready(function(){
 $("#next").click(function() {window.scrollTo(0, $("#main-info").offset().top);
 });
 
-$("#next-info").click(function() {alert("pop");
-});
-
 // Not used
 function scrollFunc() {
   info.scrollIntoView();
