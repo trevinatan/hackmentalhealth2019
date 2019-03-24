@@ -9,6 +9,6 @@ html, body {
 }
 
 #overlay {
-	background: linear-gradient(#391818, transparent);
+	background: linear-gradient(black, transparent);
 	opacity: 0.6;
 }
