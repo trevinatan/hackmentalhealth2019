@@ -1,5 +1,4 @@
 html, body {
-	background-image: url("assets/img/dinner.jpg");
 	display: flex;
 	flex-direction: column;
 	height: 100%;
@@ -25,7 +24,7 @@ html, body {
 	position: relative;
 	left: 3vw;
 	top: 3vh;
-	font-family: "Exo"
+	font-family: "Arial" !important;
 }
 
 #logo:hover {
@@ -38,7 +37,7 @@ html, body {
 	position: relative;
 	top: 5vh;
 	font-size: 64px;
-	font-family: "Optima"
+	font-family: "Optima" !important;
 }
 
 #main {
@@ -51,6 +50,7 @@ html, body {
 	border: 2px;
 	height: 70%;
 	font-size: 36px;
+	font-family: "PT Sans Narrow" !important;
 	font-family: "PT Sans Narrow"
 }
 
@@ -189,7 +189,7 @@ LEVEL 3. PRESENTATION STYLES
   bottom: 0;
   left: 0;
 
-  font-family: "PT Sans Narrow";
+  font-family: "PT Sans Narrow" !important;
 }
 
 .a-field .a-field__label{
