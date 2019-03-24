@@ -7,17 +7,6 @@ html, body {
 	overflow: hidden;
 	margin: 0;
 	color: white;
-	/* Repaint Font */
-	-webkit-animation-delay: 0.1s;
-    -webkit-animation-name: fontfix;
-    -webkit-animation-duration: 0.1s;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: linear;
-}
-
-@-webkit-keyframes fontfix {
-    from { opacity: 1; }
-    to   { opacity: 1; }
 }
 
 #overlay {
@@ -62,7 +51,7 @@ html, body {
 	border: 2px;
 	height: 70%;
 	font-size: 36px;
-	font-family: "PT Sans Narrow"	
+	font-family: "PT Sans Narrow"
 }
 
 #where-box {
@@ -85,7 +74,7 @@ html, body {
   --uiFieldPlaceholderColor: white;
 }
 
-.field__input{ 
+.field__input{
   background-color: transparent;
   border-radius: 0;
   border: none;
@@ -117,7 +106,7 @@ LEVEL 2. CORE STYLES
   display: inline-block;
 }
 
-.a-field__input{ 
+.a-field__input{
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -138,7 +127,7 @@ LEVEL 3. PRESENTATION STYLES
 /* a-field */
 
 .a-field{
-  --uiFieldHeight: var(--fieldHeight, 40px);  
+  --uiFieldHeight: var(--fieldHeight, 40px);
   --uiFieldBorderWidth: var(--fieldBorderWidth, 2px);
   --uiFieldBorderColor: var(--fieldBorderColor);
 
@@ -147,7 +136,7 @@ LEVEL 3. PRESENTATION STYLES
 
   --uiFieldPaddingRight: var(--fieldPaddingRight, 15px);
   --uiFieldPaddingBottom: var(--fieldPaddingBottom, 15px);
-  --uiFieldPaddingLeft: var(--fieldPaddingLeft, 15px);   
+  --uiFieldPaddingLeft: var(--fieldPaddingLeft, 15px);
 
   position: relative;
   box-sizing: border-box;
@@ -160,15 +149,17 @@ LEVEL 3. PRESENTATION STYLES
   height: var(--uiFieldHeight);
   width: 50vw;
   padding: 0 var(--uiFieldPaddingRight) 0 var(--uiFieldPaddingLeft);
-  border-bottom: var(--uiFieldBorderWidth) solid var(--uiFieldBorderColor);  
+  border-bottom: var(--uiFieldBorderWidth) solid var(--uiFieldBorderColor);
 }
 
 .a-field .a-field__input::-webkit-input-placeholder{
   opacity: 0;
+  transition: opacity .2s ease-out;
 }
 
 .a-field .a-field__input::-moz-placeholder{
   opacity: 0;
+  transition: opacity .2s ease-out;
 }
 
 .a-field .a-field__input:not(:placeholder-shown) ~ .a-field__label-wrap .a-field__label{
@@ -189,7 +180,7 @@ LEVEL 3. PRESENTATION STYLES
 .a-field .a-field__label-wrap{
   box-sizing: border-box;
   width: 100%;
-  height: var(--uiFieldHeight);	
+  height: var(--uiFieldHeight);
 
   pointer-events: none;
   cursor: text;
@@ -241,7 +232,7 @@ LEVEL 3. PRESENTATION STYLES
 
   position: absolute;
   bottom: 0;
-  left: 0;  
+  left: 0;
 
   will-change: width;
   transition: width .285s ease-out;
@@ -307,16 +298,24 @@ LEVEL 4. SETTINGS
 
 #next {
 	color: white;
+	background-color: transparent;
 	width: 200px;
     height: 50px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     border-style: solid;
 	border-color: white;
  	border-width: 2px;
  	text-align: center;
  	font-size: 32px;
+ }
+
+ #nextbutton {
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: center;
+	 text-align: center;
  }
 
  #next:hover {
@@ -329,4 +328,3 @@ LEVEL 4. SETTINGS
     -ms-transition: background-color 0.2s linear;
     transition: background-color 0.2s linear;
  }
-
