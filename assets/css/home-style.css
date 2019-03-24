@@ -8,6 +8,11 @@ html, body {
     -webkit-animation-iteration-count: 1;
 }
 
+#overlay {
+	background: linear-gradient(#591A1A, transparent);
+	opacity: 0.8;
+}
+
 .logo { 
 	display: flex;
 	color: white;
