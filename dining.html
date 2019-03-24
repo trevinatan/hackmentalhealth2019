@@ -6,14 +6,17 @@
 	<title> Link Up </title>
 	<link rel="shortcut icon" href="assets/img/favicon.ico"/>
 	<link rel="stylesheet" href="assets/css/dining-style.css">
-	<link rel="stylesheet"
-      href="http://fonts.googleapis.com/css?family=Font+Name">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Font+Name">
 </head>
 
 <body>
 	<div id="background">
 		<div id="overlay" style='position:fixed; top: 0; bottom: 0; z-index: 0; width: 100%; height: 100%'></div>
+<<<<<<< HEAD
 	<img src="https://golf4good.org/wp-content/uploads/2016/05/dinner.jpg" 
+=======
+	<img src="assets/img/dinner.jpg"
+>>>>>>> 323db43d654e3ca27fbf2685b3f7f0d8768d631e
 		style='position:fixed; top: 0; bottom: 0; z-index: -1;
 				width: 100%; height: 100%'>
 			</div>
@@ -21,7 +24,7 @@
 		<div id="logo">LinkUp</div>
 	</div>
 	<div id="title">DINING</div>
-	<div id="main"> 
+	<div id="main">
 		<div id="where-box">
 
 		<!-- WHERE Input field-->
@@ -29,11 +32,11 @@
 			<form action="index.php" method="get">
 			<label class="field a-field a-field_a1 page__field">
 		<!-- WHERE VARIABLE: "dining-where" -->
-	      	<input class="field__input a-field__input" name="dining-where" placeholder="e.g. Crossroads" required>
+	      	<input class="field__input a-field__input" name="fname" placeholder="e.g. Crossroads" required>
 	      	<span class="a-field__label-wrap">
 	      		<span class="a-field__label">WHERE</span>
 	      	</span>
-	    	</label>	
+	    	</label>
 	    </div>
 
 		<div id="when-box">
@@ -41,17 +44,18 @@
 		<!-- @source https://codepen.io/melnik909/pen/BZpJLN -->
 			<label class="field a-field a-field_a2 page__field">
 		<!-- WHEN VARIABLE: "dining-when" -->
-      		<input class="field__input a-field__input" name = "dining-when" placeholder="e.g. 7:00PM" required>
+      		<input class="field__input a-field__input" name = "ftime" placeholder="e.g. 7:00PM" required>
       		<span class="a-field__label-wrap">
         		<span class="a-field__label">WHEN</span>
       		</span>
-    		</label>  
+    		</label>
+					</div>
+			<div id="nextbutton">
+				<input type="submit" value="Next" id="next" />
+			</div>
 			</form>
-		</div>
 
-		<div class="button">
-		<div id="next">NEXT</div>
-	</div>
+
 	</div>
 
 </body>
