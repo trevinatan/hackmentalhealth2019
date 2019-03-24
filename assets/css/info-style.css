@@ -13,22 +13,20 @@ html, body {
 	opacity: 0.6;
 }
 
-#nav-bar {
-	height: 10%;
+.logo {
 	display: flex;
-	align-items: flex-start;
-}
-
-#logo {
-	font-size: 30px;
+	color: white;
+	justify-content: flex-start;
+	font-size: 20px;
 	position: relative;
 	left: 3vw;
 	top: 3vh;
-	font-family: "Arial" !important;
+	font-family: "Arial";
 }
 
-#logo:hover {
-	cursor: pointer;
+a {
+	color: inherit;
+	text-decoration: none;
 }
 
 #main {
@@ -118,7 +116,7 @@ LEVEL 3. PRESENTATION STYLES
 */
 
 /* a-field */
-
+/*Variable declarations*/
 .a-field{
   --uiFieldHeight: var(--fieldHeight, 40px);
   --uiFieldBorderWidth: var(--fieldBorderWidth, 2px);
@@ -138,6 +136,7 @@ LEVEL 3. PRESENTATION STYLES
   color: white;
 }
 
+/*General input area*/
 .a-field .a-field__input{
   height: var(--uiFieldHeight);
   width: 50vw;
@@ -145,31 +144,25 @@ LEVEL 3. PRESENTATION STYLES
   border-bottom: var(--uiFieldBorderWidth) solid var(--uiFieldBorderColor);
 }
 
+/*Placeholder*/
 .a-field .a-field__input::-webkit-input-placeholder{
   opacity: 0;
   transition: opacity .2s ease-out;
 }
 
-.a-field .a-field__input::-moz-placeholder{
-  opacity: 0;
-  transition: opacity .2s ease-out;
-}
-
+/*Input area when placeholder invisible*/
 .a-field .a-field__input:not(:placeholder-shown) ~ .a-field__label-wrap .a-field__label{
   opacity: 0;
   bottom: var(--uiFieldPaddingBottom);
 }
 
+/*Currently active input area*/
 .a-field .a-field__input:focus::-webkit-input-placeholder{
   opacity: 0.6;
   transition-delay: .2s;
 }
 
-.a-field .a-field__input:focus::-moz-placeholder{
-  opacity: 0.6;
-  transition-delay: .2s;
-}
-
+/*Container for text input*/
 .a-field .a-field__label-wrap{
   box-sizing: border-box;
   width: 100%;
@@ -185,6 +178,7 @@ LEVEL 3. PRESENTATION STYLES
   font-family: "PT Sans Narrow" !important;
 }
 
+/*Labels for input field*/
 .a-field .a-field__label{
   position: absolute;
   left: var(--uiFieldPaddingLeft);
@@ -198,13 +192,14 @@ LEVEL 3. PRESENTATION STYLES
   will-change: bottom, opacity;
 }
 
+/*Labels moving up when clicked on*/
 .a-field .a-field__input:focus ~ .a-field__label-wrap .a-field__label{
   opacity: 1;
   bottom: var(--uiFieldHeight);
 }
 
 /* a-field_a1 */
-
+/*First input field*/
 .a-field_a1 .a-field__input{
   transition: border-color .2s ease-out;
   will-change: border-color;
@@ -215,7 +210,7 @@ LEVEL 3. PRESENTATION STYLES
 }
 
 /* a-field_a2 */
-
+/*Second input field*/
 .a-field_a2 .a-field__label-wrap:after{
   content: "";
   box-sizing: border-box;
@@ -235,38 +230,6 @@ LEVEL 3. PRESENTATION STYLES
   width: 100%;
 }
 
-/* a-field_a3 */
-
-.a-field_a3{
-  padding-top: 1.5em;
-}
-
-.a-field_a3 .a-field__label-wrap:after{
-  content: "";
-  box-sizing: border-box;
-  width: 100%;
-  height: 0;
-
-  opacity: 0;
-  border: var(--uiFieldBorderWidth) solid var(--fieldBorderColorActive);
-
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  will-change: opacity, height;
-  transition: height .2s ease-out, opacity .2s ease-out;
-}
-
-.a-field_a3 .a-field__input:focus ~ .a-field__label-wrap:after{
-  height: 100%;
-  opacity: 1;
-}
-
-.a-field_a3 .a-field__input:focus ~ .a-field__label-wrap .a-field__label{
-  bottom: calc(var(--uiFieldHeight) + .5em);
-}
-
 /*
 =====
 LEVEL 4. SETTINGS
@@ -280,19 +243,45 @@ LEVEL 4. SETTINGS
 
 #blurb {
 	width: 100%;
-	height: 30%;
+	height: 20%;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-
 }
 
-#response {
-	width: 50%;
+.response {
+	text-align: center;
+	font-size: 24px; 
+	width: 50vw;
+	height: 15vh;
 	background-color: transparent;
 	border-style: solid;
 	border-width: 2px;
 	border-color: white;
+	color: white;	
+}
+
+.response::-webkit-input-placeholder{
+  opacity: 0.8;
+  color: white;
+  transition: opacity .2s ease-out;
+  display: flex;
+  font-family: "PT Sans" !important;
+}
+
+.response .response-label-wrap{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+  cursor: text;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  font-family: "PT Sans Narrow" !important;
 }
 
 /* NEXT BUTTON */
