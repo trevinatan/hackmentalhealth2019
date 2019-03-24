@@ -39,8 +39,6 @@ a {
 	height: 100%;
 	font-size: 36px;
 	font-family: "PT Sans Narrow" !important;
-  position: relative;
-  bottom: 5vh;
 }
 
 #title {
@@ -256,6 +254,18 @@ LEVEL 4. SETTINGS
 
 /* ABOUT YOU PAGE*/
 
+#main-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-evenly;
+  height: 100%;
+  font-size: 36px;
+  font-family: "PT Sans Narrow" !important;
+  position: relative;
+  bottom: 5vh;
+}
+
 #name {
   display: flex;
   flex-direction: row;
@@ -317,8 +327,48 @@ LEVEL 4. SETTINGS
 
 
  /* NEXT BUTTON */
-
 #next {
+  color: white;
+  background-color: transparent;
+  width: 200px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  text-align: center;
+  font-size: 32px;
+  font-family: "PT Sans Narrow";
+ }
+
+#next:hover {
+  cursor: pointer;
+  color: #2E2A2A;
+    background-color: white;
+    opacity: 0.8;
+    border-color: #2E2A2A;
+    -webkit-transition: background-color 0.2s linear;
+    -ms-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+ }
+
+ #nextbutton {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   text-align: center;
+ }
+ 
+   #nextbutton-info {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   text-align: center;
+ }
+
+#next-info {
 	color: white;
 	background-color: transparent;
 	width: 200px;
@@ -334,14 +384,7 @@ LEVEL 4. SETTINGS
   font-family: "PT Sans Narrow";
  }
 
- #nextbutton {
-	 display: flex;
-	 flex-direction: row;
-	 justify-content: center;
-	 text-align: center;
- }
-
- #next:hover {
+ #next-info:hover {
  	cursor: pointer;
  	color: #2E2A2A;
   	background-color: white;
