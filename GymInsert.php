@@ -9,7 +9,6 @@ $conn = new mysqli('localhost','root','POTATO123');
 if ($conn->connect_error) {
     die("Database connection failed." . $conn->connect_error);
 }
-echo "Database connected successfully. <br>";
 
 // Selects the Database sample_db
 mysqli_select_db($conn,"sample_db");
@@ -19,9 +18,9 @@ $sql="INSERT INTO gym_table (fname,fphonenumber, flocation, ftime, fblurb)
 VALUES ('$_POST[fname]','$_POST[fphonenumber]', '$_POST[flocation]', '$_POST[ftime]', '$_POST[fblurb]')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Inserted new record successfully! <br>";
+    echo "<br>";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo $conn->error;
 }
 
 // Delete old matches
@@ -32,9 +31,9 @@ if (mysqli_num_rows($result) >= 2) {
 }
 
 if ($conn->query($sql) === TRUE) {
-    echo "Old matches deleted successfully. <br>";
+    echo "<br>";
 } else {
-    echo "Match found! <br>" . $conn->error;
+    echo $conn->error;
 }
 
 // Updates new matches
@@ -45,18 +44,13 @@ if (mysqli_num_rows($result) == 2) {
 }
 
 if ($conn->query($sql) === TRUE) {
-    echo "Updated new matches successfully. <br>";
+    echo "<br>";
 } else {
-    echo "No matches found, please wait. <br>" . $conn->error;
+    echo $conn->error;
 }
 
-echo "<br>";
 mysqli_close($conn);
-
 ?>
-
-Welcome <?php echo $_POST['fname']; ?>!<br>
-
 <div id="show"></div>
 
 <script type="text/javascript" src="jquery.js"> </script>
