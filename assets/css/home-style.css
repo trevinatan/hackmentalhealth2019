@@ -31,7 +31,7 @@ html, body {
 	font-size: 28px; 
 	top: 4vh;
 	color: white;
-	font-family: "Open-Sans", sans-sarif;
+	font-family: "Calibri";
 	position: relative;
 }
 
@@ -58,9 +58,9 @@ html, body {
 	display: flex;
 	position: relative;
 	flex-direction: column;
-	justify-content: center;
 	text-align: center;	
-	width : 18%;
+	justify-content: center;
+	width : 15%;
 	height: 38%;
     color: #ffffff; /** initial color of the text **/ 
     border: #ffffff solid 2px;
@@ -72,13 +72,18 @@ html, body {
 
 .b09_electric:hover {
 	cursor: pointer;
-	width: 18%;
+	width: 15%;
 	opacity: 0.8; 
     color: #000000; /** final color of the text **/
     background-color: #D3D3D3; /** final color of the box **/
     transition: all 0.2s;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
 }
 
 @-webkit-keyframes b09_electric_blinkIn {
