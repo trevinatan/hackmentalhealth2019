@@ -23,14 +23,16 @@ html, body {
 .title-bar {
 	display: flex;
 	justify-content: center;
-	font-style: italic;
 	font-size: 28px; 
 	top: 4vh;
 	color: white;
-	font-family: "Jura";
+	font-family: "Open-Sans", sans-sarif;
 	position: relative;
 }
 
+/*a {
+	
+}*/
 
 .container {
 	
