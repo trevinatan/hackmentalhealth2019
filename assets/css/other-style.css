@@ -1,0 +1,433 @@
+html, body {
+	display: flex;
+	flex-direction: column;
+  justify-content: space-between;
+  height: 250%;
+	width: 100%;
+	overflow: visible;
+	margin: 0;
+	color: white;
+  scroll-behavior: smooth;
+}
+
+#overlay {
+	background: linear-gradient(#280303, transparent);
+	opacity: 0.8;
+}
+
+.logo {
+  display: flex;
+  color: white;
+  justify-content: flex-start;
+  font-size: 20px;
+  position: relative;
+  left: 3vw;
+  top: 3vh;
+  font-family: "Arial";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	justify-content: space-evenly;
+	height: 100%;
+	font-size: 36px;
+	font-family: "PT Sans Narrow" !important;
+}
+
+#title {
+  display: flex;
+  justify-content: center;
+  font-size: 64px;
+  font-family: "Roboto Slab" !important;
+}
+
+#what-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+#where-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	justify-content: space-around;
+	align-items: flex-end;
+}
+
+#when-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	justify-content: space-around;
+}
+
+/* WHERE & WHEN INPUT FIELDS */
+.field{
+  --uiFieldPlaceholderColor: white;
+}
+
+.field__input{
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  font-family: inherit;
+  font-size: 1em;
+}
+
+.field__input:focus::-webkit-input-placeholder{
+  color: white;
+  opacity: 0.8;
+}
+
+.field__input:focus::-moz-placeholder{
+  color: white;
+  opacity: 1;
+}
+
+/*
+=====
+LEVEL 2. CORE STYLES
+=====
+*/
+
+.a-field{
+  display: inline-block;
+}
+
+.a-field__input{
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  color: white;
+}
+
+.a-field__input:focus{
+  outline: none;
+  color: white;
+}
+
+/*
+=====
+LEVEL 3. PRESENTATION STYLES
+=====
+*/
+
+/* a-field */
+
+.a-field{
+  --uiFieldHeight: var(--fieldHeight, 40px);
+  --uiFieldBorderWidth: var(--fieldBorderWidth, 2px);
+  --uiFieldBorderColor: var(--fieldBorderColor);
+
+  --uiFieldFontSize: 36px;
+  --uiFieldHintFontSize: 40px;
+
+  --uiFieldPaddingRight: var(--fieldPaddingRight, 15px);
+  --uiFieldPaddingBottom: var(--fieldPaddingBottom, 15px);
+  --uiFieldPaddingLeft: var(--fieldPaddingLeft, 15px);
+
+  position: relative;
+  box-sizing: border-box;
+  font-size: var(--uiFieldFontSize);
+  padding-top: 1em;
+  color: white;
+}
+
+.a-field .a-field__input{
+  height: var(--uiFieldHeight);
+  width: 50vw;
+  padding: 0 var(--uiFieldPaddingRight) 0 var(--uiFieldPaddingLeft);
+  border-bottom: var(--uiFieldBorderWidth) solid var(--uiFieldBorderColor);
+}
+
+.a-field .a-field__input::-webkit-input-placeholder{
+  opacity: 0;
+  transition: opacity .2s ease-out;
+}
+
+.a-field .a-field__input::-moz-placeholder{
+  opacity: 0;
+  transition: opacity .2s ease-out;
+}
+
+.a-field .a-field__input:not(:placeholder-shown) ~ .a-field__label-wrap .a-field__label{
+  opacity: 0;
+  bottom: var(--uiFieldPaddingBottom);
+}
+
+.a-field .a-field__input:focus::-webkit-input-placeholder{
+  opacity: 0.6;
+  transition-delay: .2s;
+}
+
+.a-field .a-field__input:focus::-moz-placeholder{
+  opacity: 0.6;
+  transition-delay: .2s;
+}
+
+.a-field .a-field__label-wrap{
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--uiFieldHeight);
+
+  pointer-events: none;
+  cursor: text;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  font-family: "PT Sans Narrow" !important;
+}
+
+.a-field .a-field__label{
+  position: absolute;
+  left: var(--uiFieldPaddingLeft);
+  bottom: calc(50% - .5em);
+
+  line-height: 1.5;
+  font-size: var(--uiFieldHintFontSize);
+
+  pointer-events: none;
+  transition: bottom .2s cubic-bezier(0.9,-0.15, 0.1, 1.15), opacity .2s ease-out;
+  will-change: bottom, opacity;
+}
+
+.a-field .a-field__input:focus ~ .a-field__label-wrap .a-field__label{
+  opacity: 1;
+  bottom: var(--uiFieldHeight);
+}
+
+/* a-field_a1 */
+
+.a-field_a1 .a-field__input{
+  transition: border-color .2s ease-out;
+  will-change: border-color;
+}
+
+.a-field_a1 .a-field__input:focus{
+  border-color: var(--fieldBorderColorActive);
+}
+
+/* a-field_a2 */
+
+.a-field_a2 .a-field__label-wrap:after{
+  content: "";
+  box-sizing: border-box;
+  width: 0;
+  height: var(--uiFieldBorderWidth);
+  background-color: var(--fieldBorderColorActive);
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  will-change: width;
+  transition: width .285s ease-out;
+}
+
+.a-field_a2 .a-field__input:focus ~ .a-field__label-wrap:after{
+  width: 100%;
+}
+
+/* a-field_a3 */
+
+.a-field_a3{
+  padding-top: 1.5em;
+}
+
+.a-field_a3 .a-field__label-wrap:after{
+  content: "";
+  box-sizing: border-box;
+  width: 100%;
+  height: 0;
+
+  opacity: 0;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  will-change: opacity, height;
+  transition: height .2s ease-out, opacity .2s ease-out;
+}
+
+.a-field_a3 .a-field__input:focus ~ .a-field__label-wrap:after{
+  height: 100%;
+  opacity: 1;
+}
+
+.a-field_a3 .a-field__input:focus ~ .a-field__label-wrap .a-field__label{
+  bottom: calc(var(--uiFieldHeight) + .5em);
+}
+
+/*
+=====
+LEVEL 4. SETTINGS
+=====
+*/
+
+.field{
+  --fieldBorderColor: white;
+  --fieldBorderColorActive: white;
+}
+
+/* SPACER */
+#space {
+  height: 120vh;
+}
+
+/* ABOUT YOU PAGE*/
+
+#main-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-evenly;
+  height: 100%;
+  font-size: 36px;
+  font-family: "PT Sans Narrow" !important;
+}
+
+#name {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+#phone {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+#blurb {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.response {
+  text-align: center;
+  font-size: 24px; 
+  width: 50vw;
+  height: 15vh;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  color: white; 
+  overflow: scroll;
+}
+
+.response::-webkit-input-placeholder{
+  opacity: 0.8;
+  color: white;
+  transition: opacity .2s ease-out;
+  display: flex;
+  font-family: "PT Sans" !important;
+}
+
+.response .response-label-wrap{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+  cursor: text;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  font-family: "PT Sans Narrow" !important;
+}
+
+
+ /* NEXT BUTTON */
+#next {
+  color: white;
+  background-color: transparent;
+  width: 200px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  text-align: center;
+  font-size: 32px;
+  font-family: "PT Sans Narrow";
+ }
+
+#next:hover {
+  cursor: pointer;
+  color: #2E2A2A;
+    background-color: white;
+    opacity: 0.8;
+    border-color: #2E2A2A;
+    -webkit-transition: background-color 0.2s linear;
+    -ms-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+ }
+
+ #nextbutton {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   text-align: center;
+ }
+
+   #nextbutton-info {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   text-align: center;
+ }
+
+#next-info {
+	color: white;
+	background-color: transparent;
+	width: 200px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-style: solid;
+	border-color: white;
+ 	border-width: 2px;
+ 	text-align: center;
+ 	font-size: 32px;
+  font-family: "PT Sans Narrow";
+ }
+
+ #next-info:hover {
+ 	cursor: pointer;
+ 	color: #2E2A2A;
+  	background-color: white;
+  	opacity: 0.8;
+  	border-color: #2E2A2A;
+    -webkit-transition: background-color 0.2s linear;
+    -ms-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+ }
