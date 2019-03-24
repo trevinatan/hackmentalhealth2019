@@ -3,11 +3,9 @@ html, body {
 	margin: 0;
 	height: 100%;
 	width: 100%;
-	-webkit-animation-delay: 0.1s;
     -webkit-animation-name: fontfix;
     -webkit-animation-duration: 0.1s;
     -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: linear;
 }
 
 .logo { 
@@ -60,9 +58,9 @@ html, body {
     color: #ffffff; /** initial color of the text **/ 
     border: #ffffff solid 2px;
     padding: 10px;
-    transition: all 0.1s ease;
-    -webkit-transition: all 0.1s ease;
-    -moz-transition: all 0.1s ease;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
 }
 
 .b09_electric:hover {
@@ -71,12 +69,9 @@ html, body {
 	opacity: 0.8; 
     color: #000000; /** final color of the text **/
     background-color: #D3D3D3; /** final color of the box **/
-    animation: b09_electric_blinkIn 0.1s step-end 0 2;
-    -webkit-animation: b09_electric_blinkIn 0.1s step-end 0 2;
-    -moz-animation: b09_electric_blinkIn 0.1s step-end 0 2;
-    transition: all 0.2s ease 0.2s;
-    -webkit-transition: all 0.2s ease 0.2s;
-    -moz-transition: all 0.2s ease 0.2s;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
 }
 
 @-webkit-keyframes b09_electric_blinkIn {
