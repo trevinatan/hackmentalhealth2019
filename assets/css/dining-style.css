@@ -25,7 +25,7 @@ html, body {
 	position: relative;
 	left: 3vw;
 	top: 3vh;
-	font-family: "Trebuchet MS"
+	font-family: "Exo"
 }
 
 #logo:hover {
@@ -51,7 +51,7 @@ html, body {
 	border: 2px;
 	height: 70%;
 	font-size: 36px;
-	font-family: "Helvetica Narrow, sans-serif"	
+	font-family: "PT Sans Narrow"	
 }
 
 #where-box {
@@ -131,8 +131,8 @@ LEVEL 3. PRESENTATION STYLES
   --uiFieldBorderWidth: var(--fieldBorderWidth, 2px);
   --uiFieldBorderColor: var(--fieldBorderColor);
 
-  --uiFieldFontSize: 32px;
-  --uiFieldHintFontSize: 36px;
+  --uiFieldFontSize: 36px;
+  --uiFieldHintFontSize: 40px;
 
   --uiFieldPaddingRight: var(--fieldPaddingRight, 15px);
   --uiFieldPaddingBottom: var(--fieldPaddingBottom, 15px);
@@ -189,7 +189,7 @@ LEVEL 3. PRESENTATION STYLES
   bottom: 0;
   left: 0;
 
-  font-family: "Helvetica Narrow";
+  font-family: "PT Sans Narrow";
 }
 
 .a-field .a-field__label{

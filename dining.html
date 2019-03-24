@@ -6,6 +6,8 @@
 	<title> Link Up </title>
 	<link rel="shortcut icon" href="assets/img/favicon.ico"/>
 	<link rel="stylesheet" href="assets/css/dining-style.css">
+	<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Font+Name">
 </head>
 
 <body>
@@ -24,21 +26,21 @@
 
 		<!-- WHERE Input field-->
 		<!-- @source https://codepen.io/melnik909/pen/BZpJLN -->
-			<form action="index.php" method="post">
+			<form action="index.php" method="get">
 			<label class="field a-field a-field_a1 page__field">
+		<!-- WHERE VARIABLE: "dining-where" -->
 	      	<input class="field__input a-field__input" name="dining-where" placeholder="e.g. Crossroads" required>
 	      	<span class="a-field__label-wrap">
 	      		<span class="a-field__label">WHERE</span>
 	      	</span>
-	    	</label>
-	    	</form>
+	    	</label>	
 	    </div>
 
 		<div id="when-box">
-			<!-- WHEN Input field -->
-			<!-- @source https://codepen.io/melnik909/pen/BZpJLN -->
-			<form action="index.php" method="post">
+		<!-- WHEN Input field -->
+		<!-- @source https://codepen.io/melnik909/pen/BZpJLN -->
 			<label class="field a-field a-field_a2 page__field">
+		<!-- WHEN VARIABLE: "dining-when" -->
       		<input class="field__input a-field__input" name = "dining-when" placeholder="e.g. 7:00PM" required>
       		<span class="a-field__label-wrap">
         		<span class="a-field__label">WHEN</span>
@@ -46,6 +48,7 @@
     		</label>  
 			</form>
 		</div>
+
 		<div class="button">
 		<div id="next">NEXT</div>
 	</div>
