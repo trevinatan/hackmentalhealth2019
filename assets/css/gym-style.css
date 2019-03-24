@@ -283,15 +283,17 @@ LEVEL 4. SETTINGS
 	color: white;
 	background-color: transparent;
 	width: 200px;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border-style: solid;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-style: solid;
 	border-color: white;
  	border-width: 2px;
  	text-align: center;
  	font-size: 32px;
+  font-family: "PT Sans Narrow";
+
  }
 
  #nextbutton {

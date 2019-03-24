@@ -259,6 +259,7 @@ LEVEL 4. SETTINGS
 	border-width: 2px;
 	border-color: white;
 	color: white;	
+  overflow: scroll;
 }
 
 .response::-webkit-input-placeholder{

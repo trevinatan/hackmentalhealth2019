@@ -44,14 +44,52 @@
     		</label>
 					</div>
 			<div id="nextbutton">
-				<input type="submit" value="Next" id="next" />
+				<input type="submit" value="NEXT" id="next" />
 			</div>
 			</form>
 
 
 	</div>
+	<div id = "space"></div>
 
-
+	<!-- ABOUT YOU PAGE -->
+	<div id="main">
+		<div id="title"> ABOUT YOU </div>
+		<!-- NAME field -->
+		<div id="name">
+			<form action="index.php" method="get">
+			<label class="field a-field a-field_a1 page__field">
+		<!-- NAME VARIABLE: "fullname" -->
+	      	<input class="field__input a-field__input" name="fullname" placeholder="e.g. Trevina Tan" required>
+	      	<span class="a-field__label-wrap">
+	      		<span class="a-field__label">NAME</span>
+	      	</span>
+	    	</label>
+		</div>
+		<!-- PHONE # field -->
+		<div id="phone">
+			<label class="field a-field a-field_a2 page__field">
+		<!-- PHONE # VARIABLE: "phone" -->
+      		<input class="field__input a-field__input" name="phone" placeholder="e.g. (123) 456-7890" required>
+      		<span class="a-field__label-wrap">
+        		<span class="a-field__label">PHONE #</span>
+      		</span>
+    		</label>
+		</div>
+		<!-- BLURB field -->
+			<div id="blurb">
+			<label class="field response-field">
+			<input class="response" name="answer" placeholder="Write a short blurb about yourself!" required>
+			<span class="response-label-wrap"></span>
+		</label>
+		</div>
+		<div id="nextbutton">
+			<input type="submit" value="Next" id="next" />
+		</div>
+	</form>
+</div>
+</div>
+<script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 
 </html>
