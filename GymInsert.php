@@ -3,7 +3,7 @@
 <?php
 
 // Create connection
-$conn = new mysqli('localhost','root','');
+$conn = new mysqli('localhost','root','POTATO123');
 
 // Check connection
 if ($conn->connect_error) {
@@ -52,6 +52,7 @@ if ($conn->query($sql) === TRUE) {
 
 echo "<br>";
 mysqli_close($conn);
+
 ?>
 
 Welcome <?php echo $_POST['fname']; ?>!<br>
@@ -62,7 +63,7 @@ Welcome <?php echo $_POST['fname']; ?>!<br>
 <script type="text/javascript">
   $(document).ready(function() {
     setInterval(function() {
-      $('#show').load("GymData.php")
+        $('#show').load("GymMatch.php")
     }, 3000)
   })
 </script>

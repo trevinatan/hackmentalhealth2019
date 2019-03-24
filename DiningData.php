@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli('localhost', 'root', '');
+$conn = new mysqli('localhost', 'root', 'POTATO123');
 mysqli_select_db($conn,"sample_db");
 $sql = "SELECT * FROM dining_table WHERE fmatch=True";
 $result = mysqli_query($conn, $sql);

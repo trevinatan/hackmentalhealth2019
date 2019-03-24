@@ -6,14 +6,12 @@ html, body {
 	display: flex;
 }
 
-.logo { 
+.logo {
 	display: flex;
 	color: white;
 	justify-content: flex-start;
 	height: 10%;
-	font-family: "Arial"; 
-	left: 3vw;
-	top: 3vh;
+	font-family: "Arial";
 	font-size: 20px;
 	position: relative;
 }
@@ -43,7 +41,8 @@ a {
 	height: 100%;
 	text-align: center;
 	position: relative;
-	right: 5vw;
+	left: 75%;
+	bottom: 10%;
 }
 
 #details {
@@ -68,4 +67,3 @@ a {
 	font-family: "Merriweather";
 	font-size: 44px;
 }
-
