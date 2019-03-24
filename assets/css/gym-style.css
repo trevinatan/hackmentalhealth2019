@@ -9,7 +9,7 @@ html, body {
 }
 
 #overlay {
-	background: linear-gradient(#391818, transparent);
+	background: linear-gradient(#4B1802, transparent);
 	opacity: 0.8;
 }
 
@@ -30,13 +30,13 @@ a {
 }
 
 #main {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	justify-content: space-evenly;
-	height: 100%;
-	font-size: 36px;
-	font-family: "PT Sans Narrow" !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-evenly;
+  height: 100%;
+  font-size: 36px;
+  font-family: "PT Sans Narrow" !important;
 }
 
 #title {
