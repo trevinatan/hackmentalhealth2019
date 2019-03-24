@@ -6,10 +6,12 @@ html, body {
 	width: 100%;
 	overflow: hidden;
 	margin: 0;
+	color: white;
 }
 
-#background {
-	filter: brightness(10%);
+#overlay {
+	background: linear-gradient(#391818, transparent);
+	opacity: 0.8;
 }
 
 #nav-bar {
@@ -26,12 +28,16 @@ html, body {
 	font-family: "Trebuchet MS"
 }
 
+#logo:hover {
+	cursor: pointer;
+}
+
 #title {
 	display: flex;
 	justify-content: center;
 	position: relative;
 	top: 5vh;
-	font-size: 50px;
+	font-size: 64px;
 	font-family: "Optima"
 }
 
@@ -45,7 +51,7 @@ html, body {
 	border: 2px;
 	height: 70%;
 	font-size: 36px;
-	font-family: "Calibri"	
+	font-family: "Helvetica Narrow, sans-serif"	
 }
 
 #where-box {
@@ -63,9 +69,9 @@ html, body {
 	justify-content: space-around;
 }
 
-
+/* WHERE & WHEN INPUT FIELDS */
 .field{
-  --uiFieldPlaceholderColor: var(--fieldPlaceholderColor, #767676);
+  --uiFieldPlaceholderColor: white;
 }
 
 .field__input{ 
@@ -81,15 +87,15 @@ html, body {
 }
 
 .field__input:focus::-webkit-input-placeholder{
-  color: var(--uiFieldPlaceholderColor);
+  color: white;
+  opacity: 0.8;
 }
 
 .field__input:focus::-moz-placeholder{
-  color: var(--uiFieldPlaceholderColor);
+  color: white;
   opacity: 1;
 }
 
-/*WHERE & WHEN INPUT FIELDS*/
 /*
 =====
 LEVEL 2. CORE STYLES
@@ -104,10 +110,12 @@ LEVEL 2. CORE STYLES
   display: block;
   box-sizing: border-box;
   width: 100%;
+  color: white;
 }
 
 .a-field__input:focus{
   outline: none;
+  color: white;
 }
 
 /*
@@ -123,8 +131,8 @@ LEVEL 3. PRESENTATION STYLES
   --uiFieldBorderWidth: var(--fieldBorderWidth, 2px);
   --uiFieldBorderColor: var(--fieldBorderColor);
 
-  --uiFieldFontSize: var(--fieldFontSize, 1em);
-  --uiFieldHintFontSize: var(--fieldHintFontSize, 1em);
+  --uiFieldFontSize: 32px;
+  --uiFieldHintFontSize: 36px;
 
   --uiFieldPaddingRight: var(--fieldPaddingRight, 15px);
   --uiFieldPaddingBottom: var(--fieldPaddingBottom, 15px);
@@ -133,7 +141,8 @@ LEVEL 3. PRESENTATION STYLES
   position: relative;
   box-sizing: border-box;
   font-size: var(--uiFieldFontSize);
-  padding-top: 1em;  
+  padding-top: 1em;
+  color: white;
 }
 
 .a-field .a-field__input{
@@ -159,12 +168,12 @@ LEVEL 3. PRESENTATION STYLES
 }
 
 .a-field .a-field__input:focus::-webkit-input-placeholder{
-  opacity: 1;
+  opacity: 0.6;
   transition-delay: .2s;
 }
 
 .a-field .a-field__input:focus::-moz-placeholder{
-  opacity: 1;
+  opacity: 0.6;
   transition-delay: .2s;
 }
 
@@ -179,6 +188,8 @@ LEVEL 3. PRESENTATION STYLES
   position: absolute;
   bottom: 0;
   left: 0;
+
+  font-family: "Helvetica Narrow";
 }
 
 .a-field .a-field__label{
@@ -186,7 +197,7 @@ LEVEL 3. PRESENTATION STYLES
   left: var(--uiFieldPaddingLeft);
   bottom: calc(50% - .5em);
 
-  line-height: 1;
+  line-height: 1.5;
   font-size: var(--uiFieldHintFontSize);
 
   pointer-events: none;
@@ -270,8 +281,8 @@ LEVEL 4. SETTINGS
 */
 
 .field{
-  --fieldBorderColor: #D1C4E9;
-  --fieldBorderColorActive: #673AB7;
+  --fieldBorderColor: white;
+  --fieldBorderColorActive: white;
 }
 
  /* NEXT BUTTON */
@@ -286,21 +297,25 @@ LEVEL 4. SETTINGS
  }
 
 #next {
+	color: white;
 	width: 200px;
     height: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-style: solid;
-	border-color: black;
- 	border-width: 1px;
+	border-color: white;
+ 	border-width: 2px;
  	text-align: center;
  	font-size: 32px;
  }
 
  #next:hover {
  	cursor: pointer;
+ 	color: #2E2A2A;
   	background-color: white;
+  	opacity: 0.8;
+  	border-color: #2E2A2A;
     -webkit-transition: background-color 0.2s linear;
     -ms-transition: background-color 0.2s linear;
     transition: background-color 0.2s linear;

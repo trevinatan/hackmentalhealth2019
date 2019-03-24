@@ -10,6 +10,7 @@
 
 <body>
 	<div id="background">
+		<div id="overlay" style='position:fixed; top: 0; bottom: 0; z-index: 0; width: 100%; height: 100%'></div>
 	<img src="assets/img/dinner.jpg" 
 		style='position:fixed; top: 0; bottom: 0; z-index: -1;
 				width: 100%; height: 100%'>
@@ -23,7 +24,7 @@
 
 		<!-- WHERE Input field-->
 		<!-- @source https://codepen.io/melnik909/pen/BZpJLN -->
-			<form action="index.php">
+			<form action="index.php" method="post">
 			<label class="field a-field a-field_a1 page__field">
 	      	<input class="field__input a-field__input" name="dining-where" placeholder="e.g. Crossroads" required>
 	      	<span class="a-field__label-wrap">
@@ -36,7 +37,7 @@
 		<div id="when-box">
 			<!-- WHEN Input field -->
 			<!-- @source https://codepen.io/melnik909/pen/BZpJLN -->
-			<form action="index.php">
+			<form action="index.php" method="post">
 			<label class="field a-field a-field_a2 page__field">
       		<input class="field__input a-field__input" name = "dining-when" placeholder="e.g. 7:00PM" required>
       		<span class="a-field__label-wrap">
