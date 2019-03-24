@@ -40,7 +40,7 @@
 		<!-- @source https://codepen.io/melnik909/pen/BZpJLN -->
 			<label class="field a-field a-field_a2 page__field">
 		<!-- WHEN VARIABLE: "dining-when" -->
-      		<input class="field__input a-field__input" name = "ftime" placeholder="e.g. 7:00PM" required>
+      		<input class="field__input a-field__input" name = "ftime" placeholder="e.g. 14:00" required>
       		<span class="a-field__label-wrap">
         		<span class="a-field__label">WHEN</span>
       		</span>
@@ -74,7 +74,7 @@
 	<div id="phone">
 		<label class="field a-field a-field_a2 page__field">
 	<!-- PHONE # VARIABLE: "phone" -->
-  		<input class="field__input a-field__input" name="fphonenumber" placeholder="e.g. (123) 456-7890" required>
+  		<input class="field__input a-field__input" name="fphonenumber" placeholder="e.g. 5105557777" input="int" required>
   		<span class="a-field__label-wrap">
     		<span class="a-field__label">PHONE #</span>
   		</span>

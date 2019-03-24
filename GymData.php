@@ -1,5 +1,8 @@
+<html>
+<body>
+
 <?php
-$conn = new mysqli('localhost', 'root', '');
+$conn = new mysqli('localhost', 'root', 'POTATO123');
 mysqli_select_db($conn,"sample_db");
 $sql = "SELECT * FROM gym_table WHERE fmatch=True";
 $result = mysqli_query($conn, $sql);
@@ -16,5 +19,9 @@ if (mysqli_num_rows($result) > 0) {
     echo $row["ftime"]."&emsp;";
     echo $row["fblurb"]."<br>";
   }
+} else {
+  echo "Loading...<br>";
 }
 ?>
+</body>
+</html>
